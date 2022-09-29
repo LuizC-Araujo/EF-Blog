@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+SA0ucLFJfYrpukcsyFFWj03I648pt8kUCNiVPRAlWX6kC20+XOdfET9RVKb0Xz0JbEZQMq7DJa0qfftVJkXrw==",
+  "dgSpecHash": "QZSpTMEkSstZ527LpCBWTDltwIRJchZxhVrgOdGaXxMqyH1w1vwRrhA8s+6G6BgyxoQn6lCc2akCx5Zb0PcTSA==",
   "success": true,
-  "projectFilePath": "F:\\EF-Blog\\Blog\\Blog\\Blog.csproj",
+  "projectFilePath": "F:\\EF-Blog\\EF-Blog\\Blog\\Blog\\Blog.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

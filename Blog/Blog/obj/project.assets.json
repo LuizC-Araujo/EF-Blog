@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\EF-Blog\\Blog\\Blog\\Blog.csproj",
+      "projectUniqueName": "F:\\EF-Blog\\EF-Blog\\Blog\\Blog\\Blog.csproj",
       "projectName": "Blog",
-      "projectPath": "F:\\EF-Blog\\Blog\\Blog\\Blog.csproj",
+      "projectPath": "F:\\EF-Blog\\EF-Blog\\Blog\\Blog\\Blog.csproj",
       "packagesPath": "C:\\Users\\lj133\\.nuget\\packages\\",
-      "outputPath": "F:\\EF-Blog\\Blog\\Blog\\obj\\",
+      "outputPath": "F:\\EF-Blog\\EF-Blog\\Blog\\Blog\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lj133\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,7 +28,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/conferironline/_packaging/ConferIR_Feed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -51,7 +52,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
