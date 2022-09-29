@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Blog.Mappings;
 using Blog.Models;
 
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +16,14 @@ namespace Blog.Data
             DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=localhost,1433;Database=Blog;User ID=sa;Password=1q2w3e4r@#$;TrustServerCertificate=True");
-            optionsBuilder.LogTo(Console.WriteLine);
+            //optionsBuilder.LogTo(Console.WriteLine);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new PostMap());
         }
     }
 }

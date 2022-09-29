@@ -16,12 +16,32 @@ namespace Blog
             //var user = new User
             //{
             //    Name = "Luiz Araujo",
-            //    Slug = "luizaraujo",
-            //    Email = "luiz@araujo.com",
+            //    Slug = "luizaraujo2",
+            //    Email = "luiz@araujo.com.br",
             //    Bio = "Dev",
             //    Image = "https://image",
             //    PasswordHash = "123456"
             //};
+
+            //_context.Users.Add(user);
+            //_context.SaveChanges();
+
+            var user = _context.Users.FirstOrDefault();
+            var post = new Post
+            {
+                Author = user,
+                Body = "Artigo novo",
+                Category = new Category
+                {
+                    Name = "Mobile",
+                    Slug = "mobile"
+                },
+                Slug = "meu-artigo",
+                Summary = "Neste artigo vamos conferir",
+                Title = "Artigo novo",
+            };
+            _context.Posts.Add(post);
+            _context.SaveChanges();
 
             //var category = new Category
             //{
@@ -57,16 +77,16 @@ namespace Blog
             //    Console.WriteLine($"{post.Title} escrito por {post.Author?.Name} em {post.Category?.Name}");
             //}
 
-            var post = _context
-                .Posts
-                .Include(x => x.Author)
-                .Include(x => x.Category)
-                .OrderByDescending(x => x.LastUpdateDate)
-                .FirstOrDefault();
+        //    var post = _context
+        //        .Posts
+        //        .Include(x => x.Author)
+        //        .Include(x => x.Category)
+        //        .OrderByDescending(x => x.LastUpdateDate)
+        //        .FirstOrDefault();
 
-            post.Author.Name = "Outro Nome";
-            _context.Posts.Update(post);
-            _context.SaveChanges();
+        //    post.Author.Name = "Outro Nome";
+        //    _context.Posts.Update(post);
+        //    _context.SaveChanges();
         }
     }
 }
