@@ -44,18 +44,29 @@ namespace Blog
             //_context.Posts.Add(post);
             //_context.SaveChanges();
 
-            var posts = _context
+            //var posts = _context
+            //    .Posts
+            //    .AsNoTracking()
+            //    .Include(x => x.Author)
+            //    .Include(x => x.Category)
+            //    .OrderByDescending(x => x.LastUpdateDate)
+            //    .ToList();
+
+            //foreach (var post in posts)
+            //{
+            //    Console.WriteLine($"{post.Title} escrito por {post.Author?.Name} em {post.Category?.Name}");
+            //}
+
+            var post = _context
                 .Posts
-                .AsNoTracking()
                 .Include(x => x.Author)
                 .Include(x => x.Category)
                 .OrderByDescending(x => x.LastUpdateDate)
-                .ToList();
+                .FirstOrDefault();
 
-            foreach (var post in posts)
-            {
-                Console.WriteLine($"{post.Title} escrito por {post.Author?.Name} em {post.Category?.Name}");
-            }
+            post.Author.Name = "Outro Nome";
+            _context.Posts.Update(post);
+            _context.SaveChanges();
         }
     }
 }
