@@ -66,7 +66,8 @@ namespace Blog.Mappings
                 .IsRequired()
                 .HasColumnName("LastUpdateDate")
                 .HasColumnType("SMALLDATETIME")
-                .HasDefaultValue(DateTime.Now.ToUniversalTime());
+                .HasDefaultValueSql("GETDATE()");
+                //.HasDefaultValue(DateTime.Now.ToUniversalTime());
 
             // Índices
             builder
@@ -90,7 +91,7 @@ namespace Blog.Mappings
                 .HasMany(x => x.Tags)
                 .WithMany(x => x.Posts)
                 .UsingEntity<Dictionary<string, object>>(
-                    "PostTage",
+                    "PostTags",
                     post => post.HasOne<Tag>()
                         .WithMany()
                         .HasForeignKey("PostId")
