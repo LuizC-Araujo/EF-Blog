@@ -66,6 +66,9 @@ namespace Blog.Mappings
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(80);
 
+            builder.
+                Property(x => x.GitHub);
+
             // Índices
             builder
                 .HasIndex(x => x.Slug, "IX_User_Slug")
